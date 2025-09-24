@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaClean - Pressing à Domicile</title>
+  <style>
+    /* Reset et style général */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #0077b6;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+    header .logo-circle {
+      width: 50px;
+      height: 50px;
+      background: #00aaff;
+      border-radius: 50%;
+      position: relative;
+    }
+    header .logo-circle::after {
+      content: '';
+      width: 20px;
+      height: 28px;
+      background: white;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      transform: rotate(-45deg);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 10px 0 15px;
+      font-size: 1.2rem;
+    }
+
+    /* Bouton commande ramassage */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 15px;
+      background: #00aaff;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #023e8a;
+    }
+
+    /* Navigation */
+    nav {
+      background: #023e8a;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0077b6;
+    }
+
+    /* Services et Tarifs */
+    .services, .tarifs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* Accroche */
+    #accroche p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Contact */
+    #contact p {
+      font-size: 1.1rem;
+      margin: 5px 0;
+    }
+
+    /* Responsive */
+    @media(max-width:600px){
+      header h1 {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header avec logo et bouton commande -->
+  <header>
+    <div class="logo">
+      <div class="logo-circle"></div>
+      <h1>AquaClean</h1>
+    </div>
+    <p>L’expertise au service de votre linge et de votre confort</p>
+    <a href="mailto:pressing@aquaclean.com?subject=Commande%20Ramassage" class="btn">Commander un ramassage</a>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#accroche">Pourquoi nous</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Pressing à Domicile</h3>
+        <p>Nous venons récupérer et livrer vos vêtements directement chez vous.</p>
+      </div>
+      <div class="card">
+        <h3>Repassage Professionnel</h3>
+        <p>Vos chemises, pantalons et tenues impeccables, prêts à porter.</p>
+      </div>
+      <div class="card">
+        <h3>Entretien Spécialisé</h3>
+        <p>Soins particuliers pour vêtements délicats et tissus spéciaux.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tarifs -->
+  <section id="tarifs">
+    <h2>Nos Tarifs</h2>
+    <p style="text-align:center">Téléchargez notre grille tarifaire complète :</p>
+    <div style="text-align:center">
+      <a href="docs/tarifs-aquaclean.pdf" class="btn" download target="_blank">Télécharger le bordereau (PDF)</a>
+    </div>
+  </section>
+
+  <!-- Accroche / Pourquoi nous choisir -->
+  <section id="accroche">
+    <h2>Pourquoi choisir AquaClean ?</h2>
+    <p>
+      Avec AquaClean, fini les corvées de linge ! Nous venons directement chez vous pour prendre soin de vos vêtements,
+      avec un service rapide, professionnel et respectueux de vos tissus. Choisissez AquaClean et profitez d’un linge
+      impeccable sans effort.
+    </p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>📞 01 56 71 63 03 | 01 66 20 67 88</p>
+    <p>📧 pressing@aquaclean.com</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AquaClean - Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
