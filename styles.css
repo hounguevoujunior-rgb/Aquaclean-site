@@ -462,3 +462,28 @@ body {
     display: none;
   }
 }
+@media (max-width: 600px) {
+  .services, .tarifs, .cards {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .card {
+    min-width: unset !important;
+    width: 100% !important;
+    font-size: 1em !important;
+    padding: 1em 0.5em !important;
+  }
+  .card-icon {
+    font-size: 2.1em !important;
+    margin-bottom: 0.2em !important;
+  }
+  .card h3 {
+    font-size: 1.07em !important;
+    margin: 0.3em 0 0.5em 0 !important;
+  }
+  .card p {
+    font-size: 1em !important;
+    margin: 0.2em 0 !important;
+    word-break: break-word !important;
+  }
+}
